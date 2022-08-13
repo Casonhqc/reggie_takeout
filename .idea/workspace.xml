@@ -126,7 +126,7 @@
       <workItem from="1658732347854" duration="18262000" />
       <workItem from="1658820249940" duration="143927000" />
       <workItem from="1659959742108" duration="8860000" />
-      <workItem from="1660281714612" duration="13032000" />
+      <workItem from="1660281714612" duration="13336000" />
     </task>
     <task id="LOCAL-00001" summary="加入redis来缓存验证码和菜品">
       <created>1660376373598</created>
@@ -142,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660379246368</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="使用redis缓存短信验证码和菜品">
+      <created>1660383987795</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660383987795</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +191,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="加入redis来缓存验证码和菜品" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入redis来缓存验证码和菜品" />
+    <MESSAGE value="使用redis缓存短信验证码和菜品" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用redis缓存短信验证码和菜品" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
