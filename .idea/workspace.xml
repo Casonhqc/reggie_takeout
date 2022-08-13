@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="70579b1f-aeaf-4f08-9c4e-c964f58ebab8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Cason/reggie/Controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Cason/reggie/Controller/DishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Cason/reggie/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Cason/reggie/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Cason/reggie/Controller/DishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Cason/reggie/Controller/DishController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Cason/reggie/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Cason/reggie/Controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -42,43 +50,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/BackendProjects/reggie_takeout/.idea",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "adae079cacba25091860d89fc1fd02c5"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/BackendProjects/reggie_takeout/src/main/java/com/Cason/reggie/config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;adae079cacba25091860d89fc1fd02c5&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.Cason.reggie" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\BackendProjects\reggie_takeout\src\main\java\com\Cason\reggie\config" />
       <recent name="D:\BackendProjects\reggie_takeout\.idea" />
       <recent name="D:\BackendProjects\reggie_takeout\src\main\java\com\Cason\reggie\Controller" />
       <recent name="D:\BackendProjects\reggie_takeout\src\main\java\com\Cason\reggie\service" />
       <recent name="D:\BackendProjects\reggie_takeout\src\main\java\com\Cason\reggie\mapper" />
-      <recent name="D:\BackendProjects\reggie_takeout\src\main\resources\front" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.Cason.reggie.service.impl" />
@@ -102,6 +110,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ReggieApplication" />
+        <item itemvalue="Spring Boot.ReggieApplication" />
+        <item itemvalue="Spring Boot.ReggieApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -116,7 +126,7 @@
       <workItem from="1658732347854" duration="18262000" />
       <workItem from="1658820249940" duration="143927000" />
       <workItem from="1659959742108" duration="8860000" />
-      <workItem from="1660281714612" duration="9624000" />
+      <workItem from="1660281714612" duration="13032000" />
     </task>
     <task id="LOCAL-00001" summary="加入redis来缓存验证码和菜品">
       <created>1660376373598</created>
@@ -125,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660376373598</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="加入redis来缓存验证码和菜品">
+      <created>1660379246368</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660379246368</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

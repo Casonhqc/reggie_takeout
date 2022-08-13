@@ -1,6 +1,11 @@
 server:
   port: 8010
 spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
   mail:
     host: smtp.qq.com  # 发送邮件的服务器地址
     username: 1125193113@qq.com # 开启 IMAP/SMTP服务 的qq邮箱的账号

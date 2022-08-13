@@ -13,9 +13,11 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @RestController
@@ -26,6 +28,8 @@ public class DishController {
     private DishService dishService;
     @Autowired
     private CategoryService categoryService;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     /**
      * 新增菜品
@@ -35,6 +39,8 @@ public class DishController {
  @PostMapping
     public R<String> save(@RequestBody DishDto dishDto){
     dishService.saveWithFlavor(dishDto);
+     String key = "dish" + dishDto.getCategoryId()+"_1";
+     redisTemplate.delete(key);
     return R.success("新增菜品成功");
  }
 
@@ -96,11 +102,28 @@ public class DishController {
     @PutMapping
     public R<String> update(@RequestBody DishDto dishDto){
         dishService.updateWithFlavor(dishDto);
+
+        //清理该分类下的菜品缓存数据
+        String key = "dish" + dishDto.getCategoryId()+"_1";
+        redisTemplate.delete(key);
         return R.success("修改菜品成功");
     }
 
     @GetMapping("/list")
     public R<List<DishDto>> list (Dish dish){//传过来的是categoryId，直接用Dish存
+        List<DishDto> dishDtoList = null; //先创建返回内容
+
+        //动态构造key
+        String key = "dish" + dish.getCategoryId()+"_" +dish.getStatus();
+
+        //优先从redis中获得数据
+        dishDtoList = (List<DishDto>) redisTemplate.opsForValue().get(key);
+
+        if(dishDtoList != null){
+            //如果redis中有缓存，直接返回
+            return R.success(dishDtoList);
+        }
+
         LambdaQueryWrapper<Dish>queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(dish.getCategoryId()!=null,Dish::getCategoryId,dish.getCategoryId());
         //该条件筛选出状态为1的菜品
@@ -108,11 +131,14 @@ public class DishController {
         queryWrapper.orderByAsc(Dish::getUpdateTime);
 
         List<Dish> list = dishService.list(queryWrapper);
-        List<DishDto> dishDtoList = list.stream().map((item)->{
+         dishDtoList = list.stream().map((item)->{
             Long dishId = item.getId();
             DishDto dishDto = dishService.getByIdWithFlavor(dishId);
             return dishDto;
         }).collect(Collectors.toList());
+
+         //如果redis中没有对应缓存，就在数据库查询后将数据缓存起来
+        redisTemplate.opsForValue().set(key,dishDtoList,60, TimeUnit.MINUTES);
         return R.success(dishDtoList);
     }
 
