@@ -6,6 +6,9 @@ spring:
     port: 6379
     password:
     database: 0
+  cache:
+    redis:
+      time-to-live: 1800000
   mail:
     host: smtp.qq.com  # 发送邮件的服务器地址
     username: 1125193113@qq.com # 开启 IMAP/SMTP服务 的qq邮箱的账号
